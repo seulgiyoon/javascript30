@@ -83,7 +83,7 @@ footer {
 
 @media (max-width: 1019px) {
   body {
-    height: 100%;
+    height: auto;
   }
   
   header {
