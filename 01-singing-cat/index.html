@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Singing Cat</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Bitter:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <a href="../index.html">Back to List</a>
+  </header>
+
+  <div id="contents">
+    <div id="cat">
+      <img class="cat-part" src="imgs/cat-face.png" alt="Face of a cat">
+      <img data-key="open" class="cat-part" src="imgs/eyes_open.png">
+      <img id="closed-eye" data-key="close" class="cat-part" src="imgs/eyes_close.png">
+      <img id="default-mouth" class="cat-part mouth" src="imgs/M00.png">
+      <img data-key="a" class="cat-part mouth" src="imgs/M01.png">
+      <img data-key="s" class="cat-part mouth" src="imgs/M02.png">
+      <img data-key="d" class="cat-part mouth" src="imgs/M03.png">
+      <img data-key="f" class="cat-part mouth" src="imgs/M04.png">
+      <img data-key="g" class="cat-part mouth" src="imgs/M05.png">
+      <img data-key="h" class="cat-part mouth" src="imgs/M06.png">
+      <img data-key="j" class="cat-part mouth" src="imgs/M07.png">
+      <img data-key="k" class="cat-part mouth" src="imgs/M08.png">
+    </div>
+
+    <div id="keys">
+      <div data-key="a" class="key">
+        <p class="alphabet">A</p>
+        <span class="sound">do</span>
+      </div>
+      <div data-key="s" class="key">
+        <p class="alphabet">S</p>
+        <span class="sound">re</span>
+      </div>
+      <div data-key="d" class="key">
+        <p class="alphabet">D</p>
+        <span class="sound">mi</span>
+      </div>
+      <div data-key="f" class="key">
+        <p class="alphabet">F</p>
+        <span class="sound">fa</span>
+      </div>
+      <div data-key="g" class="key">
+        <p class="alphabet">G</p>
+        <span class="sound">sol</span>
+      </div>
+      <div data-key="h" class="key">
+        <p class="alphabet">H</p>
+        <span class="sound">la</span>
+      </div>
+      <div data-key="j" class="key">
+        <p class="alphabet">J</p>
+        <span class="sound">si</span>
+      </div>
+      <div data-key="k" class="key">
+        <p class="alphabet">K</p>
+        <span class="sound">do</span>
+      </div>
+    </div>
+  </div>
+
+  <audio data-key="a" src="sounds/01_do.m4a"></audio>
+  <audio data-key="s" src="sounds/02_re.m4a"></audio>
+  <audio data-key="d" src="sounds/03_mi.m4a"></audio>
+  <audio data-key="f" src="sounds/04_fa.m4a"></audio>
+  <audio data-key="g" src="sounds/05_sol.m4a"></audio>
+  <audio data-key="h" src="sounds/06_la.m4a"></audio>
+  <audio data-key="j" src="sounds/07_si.m4a"></audio>
+  <audio data-key="k" src="sounds/08_do.m4a"></audio>
+
+  <footer>
+    <a href="https://velog.io/@sgyoon" target="_blank">https://velog.io/@sgyoon</a>
+  </footer>
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
