@@ -81,6 +81,10 @@ footer {
 }
 
 @media (max-width: 1019px) {
+  header {
+    margin-top: 10px;
+  }
+
   section {
     width: 680px;
   }
