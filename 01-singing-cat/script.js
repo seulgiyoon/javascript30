@@ -22,14 +22,14 @@ const removeClassTransitionEnd = (selector, className) => {
 }
 
 const playSound = (event) => {
-  const sound = document.querySelector(`audio[data-key="${event.key}"]`);
+  const sound = document.querySelector(`audio[data-key="${event.key.toLowerCase()}"]`);
   if (!sound) { return; }
   sound.currentTime = 0;
   sound.play();
 }
 
 const underlineText = (event) => {
-  const text = document.querySelector(`div[data-key="${event.key}"]`);
+  const text = document.querySelector(`div[data-key="${event.key.toLowerCase()}"]`);
   if (!text) { return; }
   text.classList.add('underline');
 }
@@ -40,7 +40,7 @@ const changeMouth = () => {
   return function () {
     count = count + 1;
 
-    const mouth = document.querySelector(`img[data-key="${arguments[0].key}"]`);
+    const mouth = document.querySelector(`img[data-key="${arguments[0].key.toLowerCase()}"]`);
     if (!mouth) { return; }
     mouth.style.zIndex = count;
   }
