@@ -21,15 +21,38 @@ const removeClassTransitionEnd = (selector, className) => {
   });
 }
 
+const koreanToEnglish = {
+  'ㅁ': 'a',
+  'ㄴ': 's',
+  'ㅇ': 'd',
+  'ㄹ': 'f',
+  'ㅎ': 'g',
+  'ㅗ': 'h',
+  'ㅓ': 'j',
+  'ㅏ': 'k'
+}
+
+const convertKeyToEnglish = (key) => {
+  let keyValue = '';
+
+  if (key in koreanToEnglish) {
+    keyValue = koreanToEnglish[key];
+  } else {
+    keyValue = key.toLowerCase();
+  }
+
+  return keyValue;
+}
+
 const playSound = (event) => {
-  const sound = document.querySelector(`audio[data-key="${event.key.toLowerCase()}"]`);
+  const sound = document.querySelector(`audio[data-key="${convertKeyToEnglish(event.key)}"]`);
   if (!sound) { return; }
   sound.currentTime = 0;
   sound.play();
 }
 
 const underlineText = (event) => {
-  const text = document.querySelector(`div[data-key="${event.key.toLowerCase()}"]`);
+  const text = document.querySelector(`div[data-key="${convertKeyToEnglish(event.key)}"]`);
   if (!text) { return; }
   text.classList.add('underline');
 }
@@ -40,7 +63,7 @@ const changeMouth = () => {
   return function () {
     count = count + 1;
 
-    const mouth = document.querySelector(`img[data-key="${arguments[0].key.toLowerCase()}"]`);
+    const mouth = document.querySelector(`img[data-key="${convertKeyToEnglish(arguments[0].key)}"]`);
     if (!mouth) { return; }
     mouth.style.zIndex = count;
   }
