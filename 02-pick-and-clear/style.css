@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  flex: 1;
+}
+
+#controls-wapper {
+  flex-basis: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#controls {
+  display: flex;
+}
+
+#photo-wrapper {
+  flex: 0 0 700px;
+  display: flex;
+  height: 80vh;
+}
+
+.photo {
+  flex: 0 0 25%;
+  display: flex;
+}
+
+.photo > * {
+  border: 1px solid red;
+  flex: 1 1 auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+footer {
+  flex: 1;
+}
