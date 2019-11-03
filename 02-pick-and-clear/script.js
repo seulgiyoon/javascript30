@@ -8,8 +8,8 @@ const setBlurBarZero = () => {
 }
 
 const toggleOpen = function() {
-  setBlurBarZero();
   if (selectedPic.length === 0) {
+    setBlurBarZero();
     this.classList.add('open');
   } else if (selectedPic.length === 1) {
     this.classList.remove('open');
