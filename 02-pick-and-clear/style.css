@@ -54,15 +54,12 @@ header > * {
   margin-bottom: 10px;
 }
 
-#controls label {
-  color: #aeaeae;
+.label {
+  color: rgb(89, 66, 32);
   margin: 0 10px;
   font-size: 20px;
   font-weight: 600;
-}
-
-label.active {
-  color: #333333;
+  transition: all 0.15s;
 }
 
 #photo-wrapper {
@@ -95,6 +92,6 @@ label.active {
 }
       
 footer {
-  flex: 1 0 auto;
-  margin: 15px 0;
+  flex: 1 1 30px;
+  background-color: rgb(205, 190, 152);
 }
