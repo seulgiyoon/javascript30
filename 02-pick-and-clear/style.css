@@ -4,21 +4,46 @@
 
 * {
   box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+}
+
+:lang(kr) {
+  font-family: 'Gothic A1', sans-serif;
 }
 
 body {
   margin: 0;
   height: 100vh;
+  text-align: center;
   display: flex;
   flex-direction: column;
 }
 
+a {
+  text-decoration: none;
+  color: grey;
+}
+
 header {
-  flex: 1;
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+header > * {
+  font-size: 15px;
+  margin: 0 20px;
+  border-bottom: 3px solid rgb(236, 223, 191);
+}
+
+#infomation {
+  color: grey;
 }
 
 #controls-wapper {
-  flex-basis: 80px;
+  flex: 0 0 110px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,10 +51,22 @@ header {
 
 #controls {
   display: flex;
+  margin-bottom: 10px;
+}
+
+#controls label {
+  color: #aeaeae;
+  margin: 0 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+label.active {
+  color: #333333;
 }
 
 #photo-wrapper {
-  flex-basis: 700px;
+  flex: 1 1 700px;
   display: flex;
   height: 80vh;
 }
@@ -50,7 +87,6 @@ header {
 }
 
 .photo.open {
-  flex: 10;
   flex-basis: 100%;
 }
 
@@ -59,5 +95,6 @@ header {
 }
       
 footer {
-  flex: 1;
+  flex: 1 0 auto;
+  margin: 15px 0;
 }
