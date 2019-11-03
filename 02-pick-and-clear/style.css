@@ -1,3 +1,7 @@
+:root {
+  --blur: 30px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -34,16 +38,26 @@ header {
   flex-basis: 20%;
   display: flex;
   overflow: hidden;
-  margin: 0 0.5px;
+  transition: all 0.7s cubic-bezier(0, 1, 0, 1);
 }
 
 .photo img {
   flex: 1 1 auto;
   height: 100%;
-  object-fit: scale-down;
-  transform: translateX(-35%);
+  object-fit: cover;
+  cursor: pointer;
+  filter: blur(30px);
 }
 
+.photo.open {
+  flex: 10;
+  flex-basis: 100%;
+}
+
+.photo.open > * {
+  filter: blur(var(--blur));
+}
+      
 footer {
   flex: 1;
 }
