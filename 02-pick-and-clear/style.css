@@ -25,21 +25,23 @@ header {
 }
 
 #photo-wrapper {
-  flex: 0 0 700px;
+  flex-basis: 700px;
   display: flex;
   height: 80vh;
 }
 
 .photo {
-  flex: 0 0 25%;
+  flex-basis: 20%;
   display: flex;
+  overflow: hidden;
+  margin: 0 0.5px;
 }
 
-.photo > * {
-  border: 1px solid red;
+.photo img {
   flex: 1 1 auto;
   height: 100%;
-  object-fit: cover;
+  object-fit: scale-down;
+  transform: translateX(-35%);
 }
 
 footer {
