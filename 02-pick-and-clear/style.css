@@ -108,6 +108,10 @@ header > * {
   transition: all 0.7s cubic-bezier(0, 1, 0, 1);
 }
 
+.photo.mouse {
+  outline: none;
+}
+
 .photo img {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;

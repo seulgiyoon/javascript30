@@ -50,3 +50,25 @@ const focusSelectedPic = function () {
 controlBar.addEventListener('change', changeValue);
 controlBar.addEventListener('mousemove', changeValue);
 controlBar.addEventListener('keydown', focusSelectedPic);
+
+
+const mouseUser = function () {
+  pictures.forEach(picture => picture.classList.add('mouse'));
+
+  pictures.forEach(photo => photo.removeEventListener('keydown', toggleOpenWithEnter));
+  controlBar.removeEventListener('keydown', focusSelectedPic);
+}
+
+const tabKeyUser = function () {
+  if (event.key === 'Tab') {
+    pictures.forEach(picture => picture.classList.remove('mouse'));
+
+    pictures.forEach(photo => photo.addEventListener('keydown', toggleOpenWithEnter));
+    controlBar.addEventListener('keydown', focusSelectedPic);
+  } else {
+    return;
+  }
+}
+
+window.addEventListener('click', mouseUser);
+window.addEventListener('keydown', tabKeyUser);
