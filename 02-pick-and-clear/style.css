@@ -3,7 +3,8 @@
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: 'Quicksand', sans-serif;
   margin: 0;
 }
@@ -16,8 +17,13 @@ body {
   margin: 0;
   height: 100vh;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 a {
@@ -26,9 +32,15 @@ a {
 }
 
 header {
-  flex: 0 0 auto;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-top: 10px;
 }
 
@@ -43,13 +55,23 @@ header > * {
 }
 
 #controls-wapper {
-  flex: 0 0 110px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 110px;
+          flex: 0 0 110px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-bottom: 10px;
 }
@@ -59,39 +81,58 @@ header > * {
   margin: 0 10px;
   font-size: 20px;
   font-weight: 600;
+  -webkit-transition: all 0.15s;
+  -o-transition: all 0.15s;
   transition: all 0.15s;
 }
 
 #photo-wrapper {
-  flex: 1 1 700px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 700px;
+          flex: 1 1 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 80vh;
 }
 
 .photo {
-  flex-basis: 20%;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   overflow: hidden;
+  -webkit-transition: all 0.7s cubic-bezier(0, 1, 0, 1);
+  -o-transition: all 0.7s cubic-bezier(0, 1, 0, 1);
   transition: all 0.7s cubic-bezier(0, 1, 0, 1);
 }
 
 .photo img {
-  flex: 1 1 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   cursor: pointer;
-  filter: blur(30px);
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
 }
 
 .photo.open {
-  flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 .photo.open > * {
-  filter: blur(var(--blur));
+  -webkit-filter: blur(var(--blur));
+          filter: blur(var(--blur));
 }
       
 footer {
-  flex: 1 1 30px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20px;
+          flex: 1 1 20px;
   background-color: rgb(205, 190, 152);
 }
